@@ -53,7 +53,6 @@ public class Target_player : MonoBehaviour
     void shoot()
     {
         GameObject clone = Instantiate(Ammo, ShootPoint.position, ShootPoint.rotation);
-        clone.GetComponent<Rigidbody>().AddForce(Head.forward * _ProjectileSpeed);
         Destroy(clone, AliveTime);
     }
 }
